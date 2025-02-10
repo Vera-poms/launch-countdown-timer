@@ -106,6 +106,7 @@ footer{
 }
 .icons img{
  margin-right: 20px;
+ 
 }
 
 .attribution { 
@@ -125,9 +126,8 @@ footer{
 
 } */
 .icons img:hover{
- transform: translateY(5s);
- color: red;
- cursor: pointer;
- transition: all 0.3s ease-in-out;
+ /* transform: translateY(5s); */
+ fill: black;
+ /* transition: all 0.3s ease-in-out; */
 }
 }
