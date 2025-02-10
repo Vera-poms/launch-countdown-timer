@@ -17,6 +17,16 @@ body{
  font-weight: 600;
  letter-spacing: 0.2em;
 }
+.time-section::after{
+ content: '';
+  position: absolute;
+  top: 48.1%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+ }
 .time-section{
  display: flex;
  align-items: center;
@@ -36,22 +46,24 @@ body{
  flex-direction: column;
  justify-content: center;
  position: relative;
- width: 70px;
- height: 70px;
+ width: 80px;
+ height: 80px;
  background-color: #2c2c44;
  border-radius: 5px;
  color: hsl(345, 95%, 68%);
  font-weight: 700;
  font-size: 35px;
  margin-right: 20px;
+ margin-bottom: 15px;
  box-shadow: 0 4px rgba(0, 0, 0, 0.5);
+ z-index: -1;
 }
 .time-section h2::before{
  content: '';
  position: absolute;
- top: 50%;
- right: 0;
- height: 9px;
+ top: 46%;
+ right: -4px;
+ height: 8px;
  width: 9px;
  border-radius: 50%;
  background-color: rgba(29, 30,42, 1);
@@ -60,15 +72,32 @@ body{
 .time-section h2::after{
  content: '';
  position: absolute;
- top: 50%;
- left: 0;
- height: 2px;
- width: 100%;
- background-color: rgba(0, 0, 0, 0.1);
+ top: 46%;
+ left: -4px;
+ height: 8px;
+ width: 9px;
+ border-radius: 50%;
+ background-color: rgba(29, 30,42, 1);
 }
+.days-count p{
+padding-left: 20px;
+margin: 0;
+}
+.hours-count p{
+padding-left: 15px;
+margin: 0;
+
+}
+.minutes-count p, .seconds-count p{
+padding-left: 10px;
+margin: 0;
+
+}
+
 footer{
- background: url('images/pattern-hills.svg') no-repeat;
- height: 200px;
+ background: url('images/pattern-hills.svg') right, no-repeat, fixed;
+ background-size: cover;
+
 }
 .icons{
  display: flex;
@@ -78,6 +107,7 @@ footer{
 .icons img{
  margin-right: 20px;
 }
+
 .attribution { 
  color: hsl(0, 0%, 100%);
  font-size: 11px; 
@@ -86,4 +116,18 @@ footer{
 }
 .attribution a { 
  color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px){
+
+/* .time-section::after{
+ width: 30%;
+
+} */
+.icons img:hover{
+ transform: translateY(5s);
+ color: red;
+ cursor: pointer;
+ transition: all 0.3s ease-in-out;
+}
 }
